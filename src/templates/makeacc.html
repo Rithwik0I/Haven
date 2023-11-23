@@ -1,0 +1,23 @@
+{% extends 'hi.html' %}
+
+{% block halle %}
+
+<h1>SIGN UP NOW</h1>
+<form method="post">{% csrf_token %}
+    {% for field in signup_page %}
+        <p>
+            {{field.label_tag}}
+            {{field}}
+            {% if field.help_text %}
+                
+            {% endif %}
+            {% for error in field.errors %}
+                <small style="color: rgb(250, 1, 1);">{{error}}</small>
+            {% endfor %}
+        </p>
+    {% endfor %}
+    
+    <button type="submit">Register</button>
+</form>
+
+{% endblock halle %}

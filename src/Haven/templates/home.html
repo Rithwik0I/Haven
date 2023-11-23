@@ -1,0 +1,12 @@
+{% extends 'hi.html' %}
+
+{% block halle %}
+<div>
+    <p>Hello there,</p>
+    <h2>These are the Registered Users</h2>
+    {% for quest in quest %}
+        <p>{{quest}}</p>
+    {% endfor %}
+    
+</div>
+{% endblock halle %}

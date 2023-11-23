@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi Dad</title>
+    {% include 'snippet/header.html ' %}
+
+
+</head>
+<body>
+
+    <style type="text/css">
+        .main{
+            min-height: 100vh;
+            height: 100%
+        }
+        body{
+          background-image: url('https://akm-img-a-in.tosshub.com/businesstoday/images/story/201808/home-loan_660_020117053409_030917101300_080118025657.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+    </style>
+
+    <div class="main">
+        {% block halle %}
+
+        {% endblock halle %}
+    </div>    
+
+    {% include 'snippet/footer.html' %}
+</body>
+</html>
